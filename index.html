@@ -67,7 +67,7 @@ function createRain() {
   
   setInterval(function(){
     for( i=1;i<nbDrop;i++) {
-      $('#drop'+i).css('left', parseInt($('#drop'+i).css('left').replace(/px/gi, "") /* god this is so hacky */)+1);
+      $('#drop'+i).css('left', parseInt($('#drop'+i).css('left').replace(/px/gi, "") /* god this is so hacky */)+10+"px");
     }
   }, 50);
 
