@@ -60,7 +60,7 @@ function createRain() {
   var dropLeft = randRange(0,1600);
   var dropTop = randRange(-1000,1400);
 
-  $('.rain').append('<marquee><div class="drop" id="drop'+i+'"></div></marquee>');
+  $('.rain').append('<div><marquee><div class="drop" id="drop'+i+'"></div></marquee></div>');
   $('#drop'+i).css('left',dropLeft);
   $('#drop'+i).css('top',dropTop);
   }
