@@ -57,13 +57,19 @@ function randRange( minNum, maxNum) {
 function createRain() {
 
   for( i=1;i<nbDrop;i++) {
-  var dropLeft = randRange(0,1600);
-  var dropTop = randRange(-1000,1400);
-
-  $('.rain').append('<div><marquee><div class="drop" id="drop'+i+'"></div></marquee></div>');
-  $('#drop'+i).css('left',dropLeft);
-  $('#drop'+i).css('top',dropTop);
+    var dropLeft = randRange(0,1600);
+    var dropTop = randRange(-1000,1400);
+  
+    $('.rain').append('<div class="drop" id="drop'+i+'"></div>');
+    $('#drop'+i).css('left',dropLeft);
+    $('#drop'+i).css('top',dropTop);
   }
+  
+  setInterval(function(){
+    for( i=1;i<nbDrop;i++) {
+      $('#drop'+i).css('left', parseInt($('#drop'+i).css('left'))+0.1);
+    }
+  }, 50);
 
 }
 </script>
