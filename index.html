@@ -1,4 +1,4 @@
-<!doctype html>
+<!DOCTYPE html>
 <html>
 <head>
   <title>IT'S HAPPENING</title>
@@ -46,7 +46,7 @@
 </script>
 <script>
 // number of drops created.
-var nbDrop = 50; 
+var nbDrop = 50;
 
 // function to generate a random number range.
 function randRange( minNum, maxNum) {
@@ -60,7 +60,7 @@ function createRain() {
   var dropLeft = randRange(0,1600);
   var dropTop = randRange(-1000,1400);
 
-  $('.rain').append('<div class="drop" id="drop'+i+'"></div>');
+  $('.rain').append('<marquee><div class="drop" id="drop'+i+'"></div></marquee>');
   $('#drop'+i).css('left',dropLeft);
   $('#drop'+i).css('top',dropTop);
   }
